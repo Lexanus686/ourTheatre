@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <script type="text/javascript" src="/static/scripts/jquery-3.3.1.min.js"
+            th:src="@{/scripts/jquery-3.3.1.min.js}"></script>
+    <script src="/static/scripts/addPage.js" th:src="@{/scripts/addPage.js}"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/screen-site.css" th:href="@{/css/screen-site.css}">
+    <meta charset="UTF-8">
+    <title>Timetable</title>
+
+</head>
+<body>
+
+<div class="header-top">
+    <header>
+        <ul>
+            <li class="logo">
+                <a href="/">
+                    <img src="img/logo.png">
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <nav class="genres">
+        <ul class="inner">
+            <li>
+                <a href="/" class="bold">Главная</a>
+            </li>
+            <li>
+                <a href="history.html" class="bold">История</a>
+            </li>
+            <li>
+                <a href="news.html" class="bold">Новости</a>
+            </li>
+            <li>
+                <a href="timetable.html" class="bold">Афиша и билеты</a>
+            </li>
+        </ul>
+    </nav>
+
+</div>
+
+<div class="content header-padding">
+    <div class="events">
+        <div class="event">
+            <img src="img/activity-2884.jpg">
+            <!--<a href="event/event1.html"></a>-->
+            <time> 5 мая. / вс. / 20:00</time>
+            <a href="/eventPage" onclick="eventSend(1)" class="buy">КУПИТЬ БИЛЕТ</a>
+        </div>
+        <div class="event">
+            <img src="img/activity-2884.jpg">
+            <!--<a href="event/event1.html"></a>-->
+            <time> 12 мая. / вс. / 20:00</time>
+            <a href="/eventPage" onclick="eventSend(2)" class="buy">КУПИТЬ БИЛЕТ</a>
+        </div>
+        <div class="event">
+            <img src="img/activity-2884.jpg">
+            <!--<a href="event/event1.html"></a>-->
+            <time> 19 мая. / вс. / 20:00</time>
+            <a href="/eventPage" onclick="eventSend(3)" class="buy">КУПИТЬ БИЛЕТ</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

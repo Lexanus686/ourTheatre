@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/css/screen-site.css" th:href="@{/css/screen-site.css}">
+    <script type="text/javascript" src="/static/scripts/jquery-3.3.1.min.js"
+            th:src="@{/scripts/jquery-3.3.1.min.js}"></script>
+
+    <script type="text/javascript" src="/static/scripts/updatePlaces.js"
+            th:src="@{/scripts/updatePlaces.js}"></script>
+
+    <script type="text/javascript" src="/static/scripts/priceState.js"
+            th:src="@{/scripts/priceState.js}"></script>
+
+    <script type="text/javascript" src="/static/scripts/showForm.js"
+            th:src="@{/scripts/showForm.js}"></script>
+
+    <script type="text/javascript" src="/static/scripts/addPage.js"
+            th:src="@{/scripts/addPage.js}"></script>
+
+    <meta charset="UTF-8">
+    <title>Event1</title>
+
+    <script>
+        $(document).ready(function () {
+            updatePlaces();
+        })
+    </script>
+    <!-- Добавить условие, что только 1 билет пикается -->
+    <script>
+        $(document).ready(function () {
+            $('b').click(function () {
+                if (this.className !== "place") {
+                    $(this).toggleClass('selected');
+                    showForm();
+                }
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+<div class="header-top">
+    <header>
+        <ul>
+            <li class="logo">
+                <a href="/">
+                    <img src="img/logo.png">
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <nav class="genres">
+        <ul class="inner">
+            <li>
+                <a href="/" class="bold">Главная</a>
+            </li>
+            <li>
+                <a href="/history" class="bold">История</a>
+            </li>
+            <li>
+                <a href="/news" class="bold">Новости</a>
+            </li>
+            <li>
+                <a href="/timetable" class="bold">Афиша и билеты</a>
+            </li>
+        </ul>
+    </nav>
+
+</div>
+
+<div class="content header-padding">
+
+    <div id="grid">
+
+        <div class="left">
+            <img class="photo" src="img/activity-2884.jpg" alt="В лесу. Прелюдия. Белая тьма">
+        </div>
+
+        <div class="right">
+            <div class="date">
+                <div class="day">
+                    5
+                </div>
+                <div class="month">
+                    мая
+                    <span>воскресение</span>
+                    <span>13:00</span>
+                </div>
+            </div>
+            <div class="venue">
+
+            </div>
+            <div class="address">
+                Санкт-Петербург, площадь Искусств, 1
+            </div>
+            <div class="buy">
+                <button><a href="#chooseplace">Купить билеты</a></button>
+            </div>
+        </div>
+
+        <div class="center">
+            <h1>В лесу. Прелюдия. Белая тьма</h1>
+            <p class="category">
+
+                <span>Балет</span>
+            </p>
+            <div class="info">
+                <p><b>Ограничение по возрасту:</b> 16+</p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="description">
+        <h2>В лесу</h2>
+
+        <p>ПОСТАНОВЩИКИ</p>
+
+        <p>Музыка Эйтора Вила-Лобоса, Вагнера Тисо<br>
+            Хореография, постановка и костюмы:&nbsp;Начо Дуато&nbsp;<br>
+            Сценография: Вальтер Ноббе&nbsp;<br>
+            Художник по свету: Николас Фиштель&nbsp;<br>
+            Художник-технолог по костюмам:&nbsp;Алла Марусина&nbsp;<br>
+            Ассистенты хореографа: Тони Фабр, Гентиан Дода&nbsp;<br>
+            Педагоги-репетиторы:&nbsp;Эльвира Хабибуллина,&nbsp;Кирилл Мясников</p>
+
+        <p>Одно из&nbsp;лучших сочинений Начо Дуато раннего периода принесло ему мировую известность. В&nbsp;этом
+            одноактном балете испанский хореограф постигает дикарскую таинственность амазонской сельвы. Аналогией
+            бурлящей разнообразием природы представляется мировой океан человеческих чувств. Его метафизические потоки
+            вновь и&nbsp;вновь дают начала новому безудержному цветению жизни, замыкая ее&nbsp;движение в&nbsp;вечный
+            круговорот.</p>
+
+        <p>Мировая премьера: Гаага, Нидерландский театр танца-2, 15&nbsp;февраля 1990 года&nbsp;<br>
+
+        <h2>Прелюдия</h2>
+
+        <p>ПОСТАНОВЩИКИ</p>
+
+        <p>Музыка Георга Фридриха Генделя, Людвига ван Бетховена, Бенджамина Бриттена&nbsp;<br>
+            Хореограф, художник-постановщик, художник по костюмам:&nbsp;Начо Дуато&nbsp;<br>
+            Художник по свету: Брэд Филдс&nbsp;<br>
+            Художник-технолог по костюмам:&nbsp;Алла Марусина&nbsp;<br>
+            Музыкальный руководитель постановки:&nbsp;Валерий Овсяников&nbsp;<br>
+            Ассистенты хореографа: Жанна Аюпова,&nbsp;Кирилл Мясников&nbsp;<br>
+            Педагоги-репетиторы: Жанна Аюпова,&nbsp;Эльвира Хабибуллина,&nbsp;Кирилл Мясников&nbsp;</p>
+
+        <p>В&nbsp;этом одноактном балете хореограф утверждает равноправие трех танцевальных стилей&nbsp;—
+            романтического, классического, современного. Не&nbsp;случайно критики называли постановку «хореографической
+            контурной картой танцевального мироздания». В&nbsp;пространстве академического театра, подчиняясь законам
+            сцены и&nbsp;механике театральных иллюзий, танец иной раз забывает, к&nbsp;какой эпохе он&nbsp;принадлежит:
+            сильфиды ликуют на&nbsp;паркете бального зала, загадочные люди в&nbsp;черном оказываются ревнителями
+            академических традиций. А&nbsp;то&nbsp;вдруг в&nbsp;безмятежное течение хореографического времени резко
+            вклиниваются фрагменты декораций, которые хотели&nbsp;бы поменять предписанную им&nbsp;неподвижность на&nbsp;движение
+            или хотя&nbsp;бы его видимость. Никакого сюжета балет не&nbsp;предполагает&nbsp;— в&nbsp;его основе
+            полифония мотивов, игра и&nbsp;соперничество пластических образов</p>
+
+        <p>Мировая премьера: Михайловский театр, 14 июня 2011 года</p>
+
+        <h2>Белая тьма</h2>
+
+        <p>ПОСТАНОВЩИКИ</p>
+
+        <p>Музыка Карла Дженкинса<br>
+            Хореография и&nbsp;постановка:&nbsp;Начо Дуато&nbsp;<br>
+            Сценография: Джаффар Чалаби&nbsp;<br>
+            Художник по&nbsp;костюмам: Лурдес Фриас&nbsp;<br>
+            Художник по&nbsp;свету: Хуп Кабурт&nbsp;<br>
+            Дирижёр-постановщик:&nbsp;Мариус Стравинский&nbsp;<br>
+            Художник-технолог по&nbsp;костюмам:&nbsp;Алла Марусина&nbsp;<br>
+            Ассистент хореографа-постановщика: Томас Кляйн&nbsp;<br>
+            Ассистент дирижёра-постановщика:&nbsp;Игорь Томашевский&nbsp;<br>
+            Педагоги-репетиторы:&nbsp;Эльвира Хабибуллина,&nbsp;Кирилл Мясников</p>
+
+        <p>Одноактный балет «Белая тьма» Начо Дуато сочинял как реквием по&nbsp;безвременно ушедшей сестре. Получился
+            шедевр, который, по&nbsp;оценкам критиков, в&nbsp;ландшафте современного искусства «смотрится недосягаемой
+            вершиной».</p>
+
+        <p>Мировая премьера: Мадрид, 2001&nbsp;<br>
+    </div>
+
+
+</div>
+
+<a name="chooseplace"></a>
+<div id="map">
+    <h2>Выберите место</h2>
+    <div class="places" style="width: 330px; height: 500px">
+        <b class="place" style="top:110px;left:420px"></b>
+        <b class="place" style="top:110px;left:450px"></b>
+        <b class="place" style="top:110px;left:480px"></b>
+        <b class="place" style="top:110px;left:510px"></b>
+
+        <b class="place" style="top:160px;left:420px"></b>
+        <b class="place" style="top:160px;left:450px"></b>
+        <b class="place" style="top:160px;left:480px"></b>
+        <b class="place" style="top:160px;left:510px"></b>
+
+        <b class="place" style="top:210px;left:420px"></b>
+        <b class="place" style="top:210px;left:450px"></b>
+        <b class="place" style="top:210px;left:480px"></b>
+        <b class="place" style="top:210px;left:510px"></b>
+
+        <b class="place" style="top:260px;left:420px"></b>
+        <b class="place" style="top:260px;left:450px"></b>
+        <b class="place" style="top:260px;left:480px"></b>
+        <b class="place" style="top:260px;left:510px"></b>
+
+        <b class="place" style="top:310px;left:420px"></b>
+        <b class="place" style="top:310px;left:450px"></b>
+        <b class="place" style="top:310px;left:480px"></b>
+        <b class="place" style="top:310px;left:510px"></b>
+
+        <b class="place" style="top:360px;left:420px"></b>
+        <b class="place" style="top:360px;left:450px"></b>
+        <b class="place" style="top:360px;left:480px"></b>
+        <b class="place" style="top:360px;left:510px"></b>
+    </div>
+
+</div>
+<div id="signIn-form">
+    <fieldset>
+        <form th:action="@{/eventPage}" th:object="${event1}" method="post">
+            <p>Email: <input type="text" required value="Email" th:field="*{email}" title="Email"></p>
+            <p>Name:<input type="text" required value="Имя" th:field="*{name}" title="Name"></p>
+            <p>Surname:<input type="text" required value="Фамилия" th:field="*{surname}" title="Surname"></p>
+            <p>Phone:<input type="text" required value="Телефон" th:field="*{phone}" title="Phone"></p>
+            <footer class="clearfix">
+                <button onclick="makePayment()"> Совершить оплату</button>
+            </footer>
+        </form>
+    </fieldset>
+</div>
+</body>
+</html>

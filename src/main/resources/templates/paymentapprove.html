@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="/static/scripts/checkPayment.js"
+            th:src="@{/scripts/checkPayment.js}"></script>
+
+    <script type="text/javascript" src="/static/scripts/jquery-3.3.1.min.js"
+            th:src="@{/scripts/jquery-3.3.1.min.js}"></script>
+
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+    <title>Подтверждение платежа</title>
+
+</head>
+<body>
+
+<div class="payment-page">
+    <div class="payment-center">
+
+        <form action="#" method="post" id="formPayment">
+            <fieldset>
+                <div class="top-row">
+                    <h2>Ввод данных о карте</h2>
+                </div>
+
+                <div class="border-card">
+                    <div class="number-selection">
+                        <span class="title">Введите номер карты</span>
+
+                        <span class="custom-combobox">
+              <input maxlength="23" type="text" title="" id="pan_visible" tabindex="0" autocomplete="off"
+                     pattern="[0-9/* ]*">
+              </span>
+                    </div>
+
+                    <div class="name-card">
+                        <div class="title">Владелец карты</div>
+                        <input type="text" name="TEXT" id="iTEXT" maxlength="90" autocomplete="off">
+                    </div>
+
+                    <div class="code-wrap">
+                        <div class="title">Код безопасности</div>
+                        <div class="tooltip-wrap">
+                            <a class="close"
+                               href="https://pay.alfabank.ru/payment/merchants/default/payment_ru.html?mdOrder=bd83e6fa-acdf-7ac9-bba8-5d1d00008c12#"></a>
+                            Последние 3 цифры кода<br>на полосе для подписи.
+                        </div>
+
+                        <div class="cvc-field">
+                            <input inputmode="numeric" pattern="[0-9]*" maxlength="3" class="code invalid"
+                                   type="password" name="$CVC" id="iCVC">
+                        </div>
+                    </div>
+                </div>
+                <div id="email-container" class="mail-wrap" style="">
+                    <div class="row">
+                        <label class="title">Эл. почта владельца карты</label>
+                        <input type="text" id="email">
+                    </div>
+
+                </div>
+                <div id="phone-container" class="phone-wrap" style="">
+                    <div class="row">
+                        <label class="title">Номер телефона владельца карты</label>
+                        <input type="text" id="phone">
+                    </div>
+                </div>
+
+                <div class="btn-row">
+                    <input class="submit-btn" onclick="checkPayment()" value="Оплатить" type="button" id="buttonPayment"
+                           title="Оплатить">
+                </div>
+            </fieldset>
+        </form>
+
+    </div>
+</div>

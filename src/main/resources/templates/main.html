@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/css/screen-site.css" th:href="@{/css/screen-site.css}">
+
+    <script type="text/javascript" src="/static/scripts/jquery-3.3.1.min.js"
+            th:src="@{/scripts/jquery-3.3.1.min.js}"></script>
+
+    <script type="text/javascript" src="/static/scripts/addPage.js"
+            th:src="@{/scripts/addPage.js}"></script>
+
+    <meta charset="UTF-8">
+    <title>Theatre</title>
+</head>
+
+<body>
+
+<div class="header-top">
+    <header>
+        <ul>
+            <li class="logo">
+                <a href="/">
+                    <img src="img/logo.png">
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <nav class="genres">
+        <ul class="inner">
+            <li>
+                <a href="/" class="bold">Главная</a>
+            </li>
+            <li>
+                <a href="/history" class="bold">История</a>
+            </li>
+            <li>
+                <a href="/news" class="bold">Новости</a>
+            </li>
+            <li>
+                <a href="/timetable" class="bold">Афиша и билеты</a>
+            </li>
+        </ul>
+    </nav>
+
+</div>
+
+<div class="content header-padding">
+    <div class="events">
+        <div class="event">
+            <img src="img/activity-2884.jpg">
+            <!--<a href="event/event1.html"></a>-->
+            <time> 5 мая. / вс. / 20:00</time>
+            <a href="/eventPage" onclick="eventSend(1)" class="buy">КУПИТЬ БИЛЕТ</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
